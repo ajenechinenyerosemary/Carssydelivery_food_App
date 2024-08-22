@@ -12,12 +12,11 @@ function Header() {
               <br /> crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings!
             </p>
           </div>
-          {/* <div className="hero-button"> */}
-            {/* <button>View Menu</button>     */}
+         
           </div>
         </div> 
       </div>
-    // </div>
+  
   );
 };
 

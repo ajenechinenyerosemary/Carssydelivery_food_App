@@ -24,13 +24,7 @@ const PlaceOrder = () => {
   };
   
 
-  // const handleChange = (e) => {
-  //   const { name, value, type, checked } = e.target;
-  //   setFormData(prevData => ({
-  //     ...prevData,
-  //     [name]: type === 'checkbox' ? checked : value,
-  //   }));
-  // };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,38 +32,7 @@ const PlaceOrder = () => {
     // Implement form submission logic here
   };
 
-  // const validateCardDetails = () => {
-  //   const newErrors = {};
-  //   const cardNumberRegex = /^[0-9]{16}$/;
-  //   const [month, year] = formData.expiryDate.split('/');
-  //   const currentYear = new Date().getFullYear() % 100;
-  //   const currentMonth = new Date().getMonth() + 1;
 
-  //   if (!cardNumberRegex.test(formData.cardNumber)) {
-  //     newErrors.cardNumber = "The card type you entered isn't supported. Try a different card.";
-  //   }
-  //   if (parseInt(year) < currentYear || (parseInt(year) === currentYear && parseInt(month) < currentMonth)) {
-  //     newErrors.expiryDate = "The expiration date you entered is in the past.";
-  //   }
-  //   setErrors(newErrors);
-  //   return Object.keys(newErrors).length === 0;
-  // };
-
-  // const handleNextStep = () => {
-  //   console.log('handleNextStep called');
-  //   if (step === 1) {
-  //     setStep(2);
-  //   } else if (step === 2) {
-  //     if (validateCardDetails()) {
-  //       console.log('Payment details are valid');
-  //       setStep(3);
-  //     } else {
-  //       console.log('Payment details are invalid');
-  //     }
-  //   } else if (step === 3) {
-  //     setStep(4);
-  //   }
-  // };
 
   const validateCardDetails = () => {
     const newErrors = {};

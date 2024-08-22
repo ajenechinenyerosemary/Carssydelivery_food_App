@@ -29,9 +29,9 @@ const Layout = ({ setShowLogin }) => {
           <li>
             <a href="#footer" onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>Contact Us</a>
           </li>
-          <li>
+          {/* <li>
             <Link to="/addrestaurant" onClick={() => setMenu("add-restaurant")} className={menu === "add-restaurant" ? "active" : ""}>Add Restaurant</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="layout-right">
