@@ -1,0 +1,186 @@
+.Layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.layout-left {
+  flex: 0 0 auto;
+}
+
+.layout-left .logo {
+  width: 100px;
+  height: auto;
+}
+
+.layout-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.layout-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.layout-menu li a:hover,
+.layout-menu li a.active {
+  color: orangered;
+}
+
+.layout-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.basket-link {
+  position: relative;
+}
+
+.basket_icon {
+  width: 30px;
+  height: auto;
+}
+
+.dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: orangered;
+  border-radius: 50%;
+}
+
+.layout-right button {
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.layout-right button:hover {
+  background-color: orangered;
+  color: white;
+  border-color: orangered;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.close-icon {
+  width: 20px;
+  cursor: pointer;
+}
+
+.sidebar-basket-link {
+  display: none;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 15px 20px;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .layout-center {
+    display: none;
+  }
+  
+  .layout-right .basket-link,
+  .layout-right button {
+    display: none;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .sidebar-basket-link {
+    display: block;
+  }
+  
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-menu .sign-in-button {
+    margin-top: 20px;
+  }
+  
+  .sidebar-menu .sign-in-button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .sidebar-menu .sign-in-button button:hover {
+    background-color: orangered;
+    color: white;
+    border-color: orangered;
+  }
+}

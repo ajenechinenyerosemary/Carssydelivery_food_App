@@ -1,0 +1,5 @@
+# Set the default behavior to normalize line endings for all files
+* text=auto
+
+# Explicitly declare files that should have CRLF line endings on checkout
+*.html text eol=crlf

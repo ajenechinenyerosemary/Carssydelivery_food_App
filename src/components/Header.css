@@ -1,0 +1,94 @@
+.hero-wrap {
+  background-size: cover;
+  height: 34vw;
+  overflow: hidden;
+}
+
+.hero-ctn {
+  background: url("../assets/CCP.jpg") no-repeat center;
+  align-items: center;
+  background-color: orangered;
+  background-clip: border-box;
+  color: black;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 50px;
+  animation: zoomIn 2s;
+}
+
+.header-contents > :nth-child(1) {
+  font-size: max(2.5vw, 18px);
+  font-weight: 700;
+  color: white;
+  margin-top: 80px;
+  margin-left: -20%;
+  text-align: left;
+}
+
+.header-contents > :last-child {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin-left: -20%;
+}
+
+.header-contents p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hero-button {
+  display: inline-block; 
+  margin: 5px auto;
+  padding: 3px 10px;
+  font-size: max(1vw, 13px);
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background-color: orangered;
+  color: white;
+  border-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1050px) {
+  .header-contents > :nth-child(1) {
+    max-width: 45%;
+  }
+  .hero-ctn {
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-contents > :nth-child(1) {
+    max-width: 65%;
+    font-size: 20px;
+    font-weight: 900;
+    
+    
+  }
+
+  .header-contents > :last-child{
+    display: none;
+  }
+  .hero-button{
+    padding: 2vw 4vw;
+  }
+}
